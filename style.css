@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    gap: 40px;
+    background-color: black;
+    background: url("images/batman.jpg");
+    background-position: center;
+    background-size:auto;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.btns{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#sketch{
+    all: unset;
+    cursor: pointer;
+    padding: 18px 25px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 900;
+    transition: all 0.5s;
+}
+
+#sketch:hover{
+    background-color: white;
+    color: black;
+}
+
+
+#canvas1{
+    width: 100vw;
+    height: 100vh;
+}
+
