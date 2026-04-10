@@ -5,6 +5,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+
 .main{
     width: 100vw;
     height: 100vh;
@@ -16,8 +21,6 @@
     background-position: center;
     background-size:auto;
     background-repeat: no-repeat;
-    overflow-x: hidden;
-    background-color: black;
 }
 
 .btns{
@@ -49,3 +52,28 @@
     height: 100vh;
 }
 
+
+
+
+
+.sketchContainer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridElement{
+    border: 2px solid white;
+}
+
+
+.none{
+    display: none;
+}
