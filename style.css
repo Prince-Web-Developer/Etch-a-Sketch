@@ -21,6 +21,7 @@ body{
     background-position: center;
     background-size:auto;
     background-repeat: no-repeat;
+    overflow-y: hidden;
 }
 
 .btns{
