@@ -89,20 +89,17 @@ function createGrid(size) {
     let width = (documentWidth * 0.8) / size
     width = `${width}px`
 
-
     gridElement.style.width = width
     gridElement.style.height = width
 
     gridElement.classList.add("gridElement")
 
-    for (let i = 0; i < gridSize; i++) {
-        for (let j = 0; j < gridSize; j++) {
-            if (j == 0 && i == 0) {
-                grid.appendChild(gridElement)
-            }
-            else {
-                grid.appendChild(gridElement.cloneNode())
-            }
+    for (let i = 0; i < gridSize ** 2; i++) {
+        if (i == 0) {
+            grid.appendChild(gridElement)
+        }
+        else {
+            grid.appendChild(gridElement.cloneNode())
         }
     }
 }
@@ -117,7 +114,7 @@ document.querySelector(".grid").addEventListener("mouseover", (e) => {
     sketch(elementWhichWasBeenHovered)
 })
 
-document.querySelector(".grid").addEventListener("touchmove",(e)=>{
+document.querySelector(".grid").addEventListener("touchmove", (e) => {
     const elementWhichWasBeenHovered = e.target
     sketch(elementWhichWasBeenHovered)
 })
