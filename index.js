@@ -117,7 +117,7 @@ document.querySelector(".grid").addEventListener("mouseover", (e) => {
     sketch(elementWhichWasBeenHovered)
 })
 
-document.querySelector(".grid").addEventListener("touchstart",(e)=>{
+document.querySelector(".grid").addEventListener("touchmove",(e)=>{
     const elementWhichWasBeenHovered = e.target
     sketch(elementWhichWasBeenHovered)
 })
