@@ -110,11 +110,23 @@ function createGrid(size) {
 
 
 
-// logic to add random color to gridElement with fadding effect
+
 
 document.querySelector(".grid").addEventListener("mouseover", (e) => {
     const elementWhichWasBeenHovered = e.target
+    sketch(elementWhichWasBeenHovered)
+})
 
+document.querySelector(".grid").addEventListener("touchstart",(e)=>{
+    const elementWhichWasBeenHovered = e.target
+    sketch(elementWhichWasBeenHovered)
+})
+
+
+
+
+// logic to add random color to gridElement with fadding effect
+function sketch(elementWhichWasBeenHovered) {
     let alphaValue = 0.1; // intizal alpha value
 
 
@@ -127,14 +139,13 @@ document.querySelector(".grid").addEventListener("mouseover", (e) => {
 
         // rgba is converted to rgb when alpha value is 1. so if color has reached alpha value of 1..
         // then there will be no alpha value so we just setting it to 1 otherwise we are adding 0.1 to it
-        alphaValue = temp != undefined ? +(temp.replace(")", "")) + 0.1 : 1     
+        alphaValue = temp != undefined ? +(temp.replace(")", "")) + 0.1 : 1
     }
 
 
     const backgroundColor = `rgba(${Math.floor((Math.random() * 255) + 1)},${Math.floor((Math.random() * 255) + 1)},${Math.floor((Math.random() * 255) + 1)},${alphaValue})`
     elementWhichWasBeenHovered.style["backgroundColor"] = backgroundColor
-})
-
+}
 
 
 
@@ -142,17 +153,16 @@ document.querySelector(".grid").addEventListener("mouseover", (e) => {
 
 
 // logic to change grid size via popup
-document.querySelector("#changeGrid").addEventListener("click",()=>{
+document.querySelector("#changeGrid").addEventListener("click", () => {
     const gridSize = prompt("Enter New Grid Size ")
 
-
-    if (!isNaN(gridSize)){
-        if (gridSize > 100){
+    if (!isNaN(gridSize) && gridSize > 0) {
+        if (gridSize > 100) {
             alert("Can't create that large grid")
         }
-        else{
+        else {
             createGrid(gridSize)
         }
-        
+
     }
 })
