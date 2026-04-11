@@ -30,7 +30,7 @@ body{
     right: 20px;
 }
 
-#sketch{
+.btn{
     all: unset;
     cursor: pointer;
     padding: 18px 25px;
@@ -42,7 +42,7 @@ body{
     transition: all 0.5s;
 }
 
-#sketch:hover{
+.btn:hover{
     background-color: white;
     color: black;
 }
@@ -60,6 +60,9 @@ body{
 .sketchContainer{
     width: 100vw;
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0px;
     justify-content: center;
     align-items: center;
 }
@@ -77,4 +80,10 @@ body{
 
 .none{
     display: none;
+}
+
+.btn-container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 }
